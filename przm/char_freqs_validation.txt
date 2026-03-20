@@ -1,0 +1,417 @@
+All 415 characters (least → most frequent) — VALIDATION SET
+      U+  repr           count       %  name
+  U+7530  '田'                1   0.00%  CJK UNIFIED IDEOGRAPH-7530
+  U+99A5  '馥'                1   0.00%  CJK UNIFIED IDEOGRAPH-99A5
+  U+7504  '甄'                1   0.00%  CJK UNIFIED IDEOGRAPH-7504
+  U+97F3  '音'                1   0.00%  CJK UNIFIED IDEOGRAPH-97F3
+  U+6A02  '樂'                1   0.00%  CJK UNIFIED IDEOGRAPH-6A02
+  U+6F14  '演'                1   0.00%  CJK UNIFIED IDEOGRAPH-6F14
+  U+7A7A  '空'                1   0.00%  CJK UNIFIED IDEOGRAPH-7A7A
+  U+9593  '間'                1   0.00%  CJK UNIFIED IDEOGRAPH-9593
+  U+8521  '蔡'                1   0.00%  CJK UNIFIED IDEOGRAPH-8521
+  U+4F9D  '依'                1   0.00%  CJK UNIFIED IDEOGRAPH-4F9D
+  U+6797  '林'                1   0.00%  CJK UNIFIED IDEOGRAPH-6797
+  U+821E  '舞'                1   0.00%  CJK UNIFIED IDEOGRAPH-821E
+  U+5B43  '孃'                1   0.00%  CJK UNIFIED IDEOGRAPH-5B43
+  U+4EFB  '任'                1   0.00%  CJK UNIFIED IDEOGRAPH-4EFB
+  U+5BB6  '家'                1   0.00%  CJK UNIFIED IDEOGRAPH-5BB6
+  U+8431  '萱'                1   0.00%  CJK UNIFIED IDEOGRAPH-8431
+  U+9673  '陳'                1   0.00%  CJK UNIFIED IDEOGRAPH-9673
+  U+73CA  '珊'                1   0.00%  CJK UNIFIED IDEOGRAPH-73CA
+  U+59AE  '妮'                1   0.00%  CJK UNIFIED IDEOGRAPH-59AE
+  U+738B  '王'                1   0.00%  CJK UNIFIED IDEOGRAPH-738B
+  U+83F2  '菲'                1   0.00%  CJK UNIFIED IDEOGRAPH-83F2
+  U+60C5  '情'                1   0.00%  CJK UNIFIED IDEOGRAPH-60C5
+  U+6B4C  '歌'                1   0.00%  CJK UNIFIED IDEOGRAPH-6B4C
+  U+969B  '際'                1   0.00%  CJK UNIFIED IDEOGRAPH-969B
+  U+8CBF  '貿'                1   0.00%  CJK UNIFIED IDEOGRAPH-8CBF
+  U+5FC3  '心'                1   0.00%  CJK UNIFIED IDEOGRAPH-5FC3
+  U+532F  '匯'                1   0.00%  CJK UNIFIED IDEOGRAPH-532F
+  U+661F  '星'                1   0.00%  CJK UNIFIED IDEOGRAPH-661F
+  U+1E37  'ḷ'                1   0.00%  LATIN SMALL LETTER L WITH DOT BELOW
+  U+8EAB  '身'                1   0.00%  CJK UNIFIED IDEOGRAPH-8EAB
+  U+672A  '未'                1   0.00%  CJK UNIFIED IDEOGRAPH-672A
+  U+52D5  '動'                1   0.00%  CJK UNIFIED IDEOGRAPH-52D5
+  U+50F9  '價'                1   0.00%  CJK UNIFIED IDEOGRAPH-50F9
+  U+5DF2  '已'                1   0.00%  CJK UNIFIED IDEOGRAPH-5DF2
+  U+6F32  '漲'                1   0.00%  CJK UNIFIED IDEOGRAPH-6F32
+  U+80A1  '股'                1   0.00%  CJK UNIFIED IDEOGRAPH-80A1
+  U+6771  '東'                1   0.00%  CJK UNIFIED IDEOGRAPH-6771
+  U+8CFA  '賺'                1   0.00%  CJK UNIFIED IDEOGRAPH-8CFA
+  U+760B  '瘋'                1   0.00%  CJK UNIFIED IDEOGRAPH-760B
+  U+0159  'ř'                1   0.00%  LATIN SMALL LETTER R WITH CARON
+  U+81C9  '臉'                1   0.00%  CJK UNIFIED IDEOGRAPH-81C9
+  U+66F8  '書'                1   0.00%  CJK UNIFIED IDEOGRAPH-66F8
+  U+5728  '在'                1   0.00%  CJK UNIFIED IDEOGRAPH-5728
+  U+5373  '即'                1   0.00%  CJK UNIFIED IDEOGRAPH-5373
+  U+9A5A  '驚'                1   0.00%  CJK UNIFIED IDEOGRAPH-9A5A
+  U+901A  '通'                1   0.00%  CJK UNIFIED IDEOGRAPH-901A
+  U+7528  '用'                1   0.00%  CJK UNIFIED IDEOGRAPH-7528
+  U+64EC  '擬'                1   0.00%  CJK UNIFIED IDEOGRAPH-64EC
+  U+64A4  '撤'                1   0.00%  CJK UNIFIED IDEOGRAPH-64A4
+  U+5EE3  '廣'                1   0.00%  CJK UNIFIED IDEOGRAPH-5EE3
+  U+544A  '告'                1   0.00%  CJK UNIFIED IDEOGRAPH-544A
+  U+05EA  'ת'                1   0.00%  HEBREW LETTER TAV
+  U+05E9  'ש'                1   0.00%  HEBREW LETTER SHIN
+  U+05D5  'ו'                1   0.00%  HEBREW LETTER VAV
+  U+05E7  'ק'                1   0.00%  HEBREW LETTER QOF
+  U+05D4  'ה'                1   0.00%  HEBREW LETTER HE
+  U+2606  '☆'                1   0.00%  WHITE STAR
+  U+3088  'よ'                1   0.00%  HIRAGANA LETTER YO
+  U+308D  'ろ'                1   0.00%  HIRAGANA LETTER RO
+  U+304F  'く'                1   0.00%  HIRAGANA LETTER KU
+  U+304A  'お'                1   0.00%  HIRAGANA LETTER O
+  U+306D  'ね'                1   0.00%  HIRAGANA LETTER NE
+  U+3044  'い'                1   0.00%  HIRAGANA LETTER I
+  U+307E  'ま'                1   0.00%  HIRAGANA LETTER MA
+  U+3059  'す'                1   0.00%  HIRAGANA LETTER SU
+  U+5DE5  '工'                1   0.00%  CJK UNIFIED IDEOGRAPH-5DE5
+  U+5546  '商'                1   0.00%  CJK UNIFIED IDEOGRAPH-5546
+  U+9280  '銀'                1   0.00%  CJK UNIFIED IDEOGRAPH-9280
+  U+884C  '行'                1   0.00%  CJK UNIFIED IDEOGRAPH-884C
+  U+00CB  'Ë'                1   0.00%  LATIN CAPITAL LETTER E WITH DIAERESIS
+  U+00FD  'ý'                1   0.00%  LATIN SMALL LETTER Y WITH ACUTE
+  U+03B8  'θ'                1   0.00%  GREEK SMALL LETTER THETA
+  U+03BB  'λ'                1   0.00%  GREEK SMALL LETTER LAMDA
+  U+03B9  'ι'                1   0.00%  GREEK SMALL LETTER IOTA
+  U+03CD  'ύ'                1   0.00%  GREEK SMALL LETTER UPSILON WITH TONOS
+  U+30EF  'ワ'                1   0.00%  KATAKANA LETTER WA
+  U+30C3  'ッ'                1   0.00%  KATAKANA LETTER SMALL TU
+  U+30D5  'フ'                1   0.00%  KATAKANA LETTER HU
+  U+30EB  'ル'                1   0.00%  KATAKANA LETTER RU
+  U+8A9E  '語'                1   0.00%  CJK UNIFIED IDEOGRAPH-8A9E
+  U+306E  'の'                1   0.00%  HIRAGANA LETTER NO
+  U+65B9  '方'                1   0.00%  CJK UNIFIED IDEOGRAPH-65B9
+  U+8A00  '言'                1   0.00%  CJK UNIFIED IDEOGRAPH-8A00
+  U+00EE  'î'                1   0.00%  LATIN SMALL LETTER I WITH CIRCUMFLEX
+  U+012D  'ĭ'                1   0.00%  LATIN SMALL LETTER I WITH BREVE
+  U+016D  'ŭ'                1   0.00%  LATIN SMALL LETTER U WITH BREVE
+  U+00C6  'Æ'                1   0.00%  LATIN CAPITAL LETTER AE
+  U+015F  'ş'                1   0.00%  LATIN SMALL LETTER S WITH CEDILLA
+  U+25BC  '▼'                1   0.00%  BLACK DOWN-POINTING TRIANGLE
+  U+010E  'Ď'                1   0.00%  LATIN CAPITAL LETTER D WITH CARON
+  U+03CC  'ό'                1   0.00%  GREEK SMALL LETTER OMICRON WITH TONOS
+  U+30FD  'ヽ'                1   0.00%  KATAKANA ITERATION MARK
+  U+3002  '。'                1   0.00%  IDEOGRAPHIC FULL STOP
+  U+56D7  '囗'                1   0.00%  CJK UNIFIED IDEOGRAPH-56D7
+  U+30CE  'ノ'                1   0.00%  KATAKANA LETTER NO
+  U+0303  '̃'                1   0.00%  COMBINING TILDE
+  U+00A6  '¦'                1   0.00%  BROKEN BAR
+  U+012A  'Ī'                1   0.00%  LATIN CAPITAL LETTER I WITH MACRON
+  U+270C  '✌'                1   0.00%  VICTORY HAND
+  U+01D0  'ǐ'                1   0.00%  LATIN SMALL LETTER I WITH CARON
+  U+00C8  'È'                1   0.00%  LATIN CAPITAL LETTER E WITH GRAVE
+  U+03B2  'β'                1   0.00%  GREEK SMALL LETTER BETA
+  U+014F  'ŏ'                1   0.00%  LATIN SMALL LETTER O WITH BREVE
+  U+0103  'ă'                1   0.00%  LATIN SMALL LETTER A WITH BREVE
+  U+0115  'ĕ'                1   0.00%  LATIN SMALL LETTER E WITH BREVE
+  U+1E24  'Ḥ'                1   0.00%  LATIN CAPITAL LETTER H WITH DOT BELOW
+  U+1E93  'ẓ'                1   0.00%  LATIN SMALL LETTER Z WITH DOT BELOW
+  U+2714  '✔'                1   0.00%  HEAVY CHECK MARK
+  U+BE14  '블'                1   0.00%  HANGUL SYLLABLE BEUL
+  U+B77D  '락'                1   0.00%  HANGUL SYLLABLE RAG
+  U+BE44  '비'                1   0.00%  HANGUL SYLLABLE BI
+  U+B208  '눈'                1   0.00%  HANGUL SYLLABLE NUN
+  U+AC10  '감'                1   0.00%  HANGUL SYLLABLE GAM
+  U+C544  '아'                1   0.00%  HANGUL SYLLABLE A
+  U+C904  '줄'                1   0.00%  HANGUL SYLLABLE JUL
+  U+AED8  '께'                1   0.00%  HANGUL SYLLABLE GGE
+  U+C9C0  '지'                1   0.00%  HANGUL SYLLABLE JI
+  U+AE08  '금'                1   0.00%  HANGUL SYLLABLE GEUM
+  U+B2E4  '다'                1   0.00%  HANGUL SYLLABLE DA
+  U+C74C  '음'                1   0.00%  HANGUL SYLLABLE EUM
+  U+C2E4  '실'                1   0.00%  HANGUL SYLLABLE SIL
+  U+C2DC  '시'                1   0.00%  HANGUL SYLLABLE SI
+  U+AC04  '간'                1   0.00%  HANGUL SYLLABLE GAN
+  U+C704  '위'                1   0.00%  HANGUL SYLLABLE WI
+  U+017C  'ż'                1   0.00%  LATIN SMALL LETTER Z WITH DOT ABOVE
+  U+0427  'Ч'                1   0.00%  CYRILLIC CAPITAL LETTER CHE
+  U+0404  'Є'                1   0.00%  CYRILLIC CAPITAL LETTER UKRAINIAN IE
+  U+0444  'ф'                1   0.00%  CYRILLIC SMALL LETTER EF
+  U+0141  'Ł'                1   0.00%  LATIN CAPITAL LETTER L WITH STROKE
+  U+017A  'ź'                1   0.00%  LATIN SMALL LETTER Z WITH ACUTE
+  U+0422  'Т'                1   0.00%  CYRILLIC CAPITAL LETTER TE
+  U+044E  'ю'                1   0.00%  CYRILLIC SMALL LETTER YU
+  U+21B2  '↲'                1   0.00%  DOWNWARDS ARROW WITH TIP LEFTWARDS
+  U+00C4  'Ä'                1   0.00%  LATIN CAPITAL LETTER A WITH DIAERESIS
+  U+00BF  '¿'                1   0.00%  INVERTED QUESTION MARK
+  U+030B  '̋'                1   0.00%  COMBINING DOUBLE ACUTE ACCENT
+  U+0410  'А'                1   0.00%  CYRILLIC CAPITAL LETTER A
+  U+0411  'Б'                1   0.00%  CYRILLIC CAPITAL LETTER BE
+  U+0394  'Δ'                1   0.00%  GREEK CAPITAL LETTER DELTA
+  U+03C6  'φ'                1   0.00%  GREEK SMALL LETTER PHI
+  U+03AC  'ά'                1   0.00%  GREEK SMALL LETTER ALPHA WITH TONOS
+  U+300C  '「'                1   0.00%  LEFT CORNER BRACKET
+  U+300D  '」'                1   0.00%  RIGHT CORNER BRACKET
+  U+02D0  'ː'                1   0.00%  MODIFIER LETTER TRIANGULAR COLON
+  U+1F60D  '😍'                1   0.00%  SMILING FACE WITH HEART-SHAPED EYES
+  U+0192  'ƒ'                1   0.00%  LATIN SMALL LETTER F WITH HOOK
+  U+2264  '≤'                1   0.00%  LESS-THAN OR EQUAL TO
+  U+2205  '∅'                1   0.00%  EMPTY SET
+  U+1E3F  'ḿ'                1   0.00%  LATIN SMALL LETTER M WITH ACUTE
+  U+2716  '✖'                1   0.00%  HEAVY MULTIPLICATION X
+  U+30A4  'イ'                1   0.00%  KATAKANA LETTER I
+  U+30ED  'ロ'                1   0.00%  KATAKANA LETTER RO
+  U+30CF  'ハ'                1   0.00%  KATAKANA LETTER HA
+  U+30E2  'モ'                1   0.00%  KATAKANA LETTER MO
+  U+30DF  'ミ'                1   0.00%  KATAKANA LETTER MI
+  U+30B8  'ジ'                1   0.00%  KATAKANA LETTER ZI
+  U+7D05  '紅'                1   0.00%  CJK UNIFIED IDEOGRAPH-7D05
+  U+8449  '葉'                1   0.00%  CJK UNIFIED IDEOGRAPH-8449
+  U+6953  '楓'                1   0.00%  CJK UNIFIED IDEOGRAPH-6953
+  U+02CC  'ˌ'                1   0.00%  MODIFIER LETTER LOW VERTICAL LINE
+  U+2010  '‐'                1   0.00%  HYPHEN
+  U+00A1  '¡'                2   0.00%  INVERTED EXCLAMATION MARK
+  U+50B3  '傳'                2   0.00%  CJK UNIFIED IDEOGRAPH-50B3
+  U+5C55  '展'                2   0.00%  CJK UNIFIED IDEOGRAPH-5C55
+  U+570B  '國'                2   0.00%  CJK UNIFIED IDEOGRAPH-570B
+  U+4E2D  '中'                2   0.00%  CJK UNIFIED IDEOGRAPH-4E2D
+  U+263C  '☼'                2   0.00%  WHITE SUN WITH RAYS
+  U+3057  'し'                2   0.00%  HIRAGANA LETTER SI
+  U+00F0  'ð'                2   0.00%  LATIN SMALL LETTER ETH
+  U+03C2  'ς'                2   0.00%  GREEK SMALL LETTER FINAL SIGMA
+  U+03B5  'ε'                2   0.00%  GREEK SMALL LETTER EPSILON
+  U+016B  'ū'                2   0.00%  LATIN SMALL LETTER U WITH MACRON
+  U+266A  '♪'                2   0.00%  EIGHTH NOTE
+  U+017E  'ž'                2   0.00%  LATIN SMALL LETTER Z WITH CARON
+  U+2260  '≠'                2   0.00%  NOT EQUAL TO
+  U+03C0  'π'                2   0.00%  GREEK SMALL LETTER PI
+  U+02BB  'ʻ'                2   0.00%  MODIFIER LETTER TURNED COMMA
+  U+2752  '❒'                2   0.00%  UPPER RIGHT SHADOWED WHITE SQUARE
+  U+0435  'е'                2   0.00%  CYRILLIC SMALL LETTER IE
+  U+043F  'п'                2   0.00%  CYRILLIC SMALL LETTER PE
+  U+043D  'н'                2   0.00%  CYRILLIC SMALL LETTER EN
+  U+0432  'в'                2   0.00%  CYRILLIC SMALL LETTER VE
+  U+0437  'з'                2   0.00%  CYRILLIC SMALL LETTER ZE
+  U+0443  'у'                2   0.00%  CYRILLIC SMALL LETTER U
+  U+0445  'х'                2   0.00%  CYRILLIC SMALL LETTER HA
+  U+010F  'ď'                2   0.00%  LATIN SMALL LETTER D WITH CARON
+  U+0112  'Ē'                2   0.00%  LATIN CAPITAL LETTER E WITH MACRON
+  U+00FF  'ÿ'                2   0.00%  LATIN SMALL LETTER Y WITH DIAERESIS
+  U+2660  '♠'                2   0.00%  BLACK SPADE SUIT
+  U+0439  'й'                2   0.00%  CYRILLIC SMALL LETTER SHORT I
+  U+044F  'я'                2   0.00%  CYRILLIC SMALL LETTER YA
+  U+03C4  'τ'                2   0.00%  GREEK SMALL LETTER TAU
+  U+03C1  'ρ'                2   0.00%  GREEK SMALL LETTER RHO
+  U+266C  '♬'                2   0.00%  BEAMED SIXTEENTH NOTES
+  U+02B9  'ʹ'                2   0.00%  MODIFIER LETTER PRIME
+  U+1E6D  'ṭ'                2   0.00%  LATIN SMALL LETTER T WITH DOT BELOW
+  U+2665  '♥'                3   0.00%  BLACK HEART SUIT
+  U+0161  'š'                3   0.00%  LATIN SMALL LETTER S WITH CARON
+  U+03BA  'κ'                3   0.00%  GREEK SMALL LETTER KAPPA
+  U+03BF  'ο'                3   0.00%  GREEK SMALL LETTER OMICRON
+  U+010D  'č'                3   0.00%  LATIN SMALL LETTER C WITH CARON
+  U+00F9  'ù'                3   0.00%  LATIN SMALL LETTER U WITH GRAVE
+  U+221E  '∞'                3   0.00%  INFINITY
+  U+013D  'Ľ'                3   0.00%  LATIN CAPITAL LETTER L WITH CARON
+  U+2030  '‰'                3   0.00%  PER MILLE SIGN
+  U+0308  '̈'                3   0.00%  COMBINING DIAERESIS
+  U+1E6C  'Ṭ'                3   0.00%  LATIN CAPITAL LETTER T WITH DOT BELOW
+  U+0456  'і'                3   0.00%  CYRILLIC SMALL LETTER BYELORUSSIAN-UKRAINIAN I
+  U+0431  'б'                3   0.00%  CYRILLIC SMALL LETTER BE
+  U+2193  '↓'                3   0.00%  DOWNWARDS ARROW
+  U+043A  'к'                3   0.00%  CYRILLIC SMALL LETTER KA
+  U+0100  'Ā'                3   0.00%  LATIN CAPITAL LETTER A WITH MACRON
+  U+0131  'ı'                4   0.00%  LATIN SMALL LETTER DOTLESS I
+  U+0130  'İ'                4   0.00%  LATIN CAPITAL LETTER I WITH DOT ABOVE
+  U+203A  '›'                4   0.00%  SINGLE RIGHT-POINTING ANGLE QUOTATION MARK
+  U+00C1  'Á'                4   0.00%  LATIN CAPITAL LETTER A WITH ACUTE
+  U+0259  'ə'                4   0.00%  LATIN SMALL LETTER SCHWA
+  U+25A0  '■'                4   0.00%  BLACK SQUARE
+  U+00A5  '¥'                4   0.00%  YEN SIGN
+  U+0163  'ţ'                4   0.00%  LATIN SMALL LETTER T WITH CEDILLA
+  U+2265  '≥'                4   0.00%  GREATER-THAN OR EQUAL TO
+  U+043C  'м'                4   0.00%  CYRILLIC SMALL LETTER EM
+  U+0438  'и'                4   0.00%  CYRILLIC SMALL LETTER I
+  U+21EA  '⇪'                4   0.00%  UPWARDS WHITE ARROW FROM BAR
+  U+2219  '∙'                4   0.00%  BULLET OPERATOR
+  U+02C8  'ˈ'                4   0.00%  MODIFIER LETTER VERTICAL LINE
+  U+00EC  'ì'                4   0.00%  LATIN SMALL LETTER I WITH GRAVE
+  U+00F2  'ò'                4   0.00%  LATIN SMALL LETTER O WITH GRAVE
+  U+017D  'Ž'                5   0.00%  LATIN CAPITAL LETTER Z WITH CARON
+  U+0153  'œ'                5   0.00%  LATIN SMALL LIGATURE OE
+  U+043B  'л'                5   0.00%  CYRILLIC SMALL LETTER EL
+  U+2190  '←'                5   0.00%  LEFTWARDS ARROW
+  U+00F5  'õ'                5   0.00%  LATIN SMALL LETTER O WITH TILDE
+  U+030A  '̊'                6   0.00%  COMBINING RING ABOVE
+  U+00E3  'ã'                6   0.00%  LATIN SMALL LETTER A WITH TILDE
+  U+304C  'が'                6   0.00%  HIRAGANA LETTER GA
+  U+1E25  'ḥ'                6   0.00%  LATIN SMALL LETTER H WITH DOT BELOW
+  U+0441  'с'                6   0.00%  CYRILLIC SMALL LETTER ES
+  U+00AC  '¬'                6   0.00%  NOT SIGN
+  U+2020  '†'                6   0.00%  DAGGER
+  U+221A  '√'                7   0.00%  SQUARE ROOT
+  U+0113  'ē'                7   0.00%  LATIN SMALL LETTER E WITH MACRON
+  U+0442  'т'                7   0.00%  CYRILLIC SMALL LETTER TE
+  U+0440  'р'                7   0.00%  CYRILLIC SMALL LETTER ER
+  U+2666  '♦'                7   0.00%  BLACK DIAMOND SUIT
+  U+00F4  'ô'                8   0.00%  LATIN SMALL LETTER O WITH CIRCUMFLEX
+  U+00E6  'æ'                8   0.00%  LATIN SMALL LETTER AE
+  U+03B1  'α'                8   0.00%  GREEK SMALL LETTER ALPHA
+  U+0107  'ć'                8   0.00%  LATIN SMALL LETTER C WITH ACUTE
+  U+201E  '„'                8   0.00%  DOUBLE LOW-9 QUOTATION MARK
+  U+014D  'ō'                8   0.00%  LATIN SMALL LETTER O WITH MACRON
+  U+00FB  'û'                9   0.00%  LATIN SMALL LETTER U WITH CIRCUMFLEX
+  U+00B1  '±'               10   0.00%  PLUS-MINUS SIGN
+  U+2764  '❤'               10   0.00%  HEAVY BLACK HEART
+  U+0142  'ł'               10   0.00%  LATIN SMALL LETTER L WITH STROKE
+  U+2318  '⌘'               10   0.00%  PLACE OF INTEREST SIGN
+  U+00FA  'ú'               11   0.00%  LATIN SMALL LETTER U WITH ACUTE
+  U+0102  'Ă'               11   0.00%  LATIN CAPITAL LETTER A WITH BREVE
+  U+0178  'Ÿ'               11   0.00%  LATIN CAPITAL LETTER Y WITH DIAERESIS
+  U+043E  'о'               11   0.00%  CYRILLIC SMALL LETTER O
+  U+0430  'а'               11   0.00%  CYRILLIC SMALL LETTER A
+  U+00EF  'ï'               12   0.00%  LATIN SMALL LETTER I WITH DIAERESIS
+  U+00C9  'É'               12   0.00%  LATIN CAPITAL LETTER E WITH ACUTE
+  U+2191  '↑'               12   0.00%  UPWARDS ARROW
+  U+201A  '‚'               12   0.00%  SINGLE LOW-9 QUOTATION MARK
+  U+00D7  '×'               13   0.00%  MULTIPLICATION SIGN
+  U+00EA  'ê'               13   0.00%  LATIN SMALL LETTER E WITH CIRCUMFLEX
+  U+00C3  'Ã'               13   0.00%  LATIN CAPITAL LETTER A WITH TILDE
+  U+015A  'Ś'               13   0.00%  LATIN CAPITAL LETTER S WITH ACUTE
+  U+00DF  'ß'               14   0.00%  LATIN SMALL LETTER SHARP S
+  U+03BC  'μ'               14   0.00%  GREEK SMALL LETTER MU
+  U+2212  '−'               14   0.00%  MINUS SIGN
+  U+00E5  'å'               15   0.00%  LATIN SMALL LETTER A WITH RING ABOVE
+  U+00F1  'ñ'               15   0.00%  LATIN SMALL LETTER N WITH TILDE
+  U+2015  '―'               15   0.00%  HORIZONTAL BAR
+  U+27BB  '➻'               15   0.00%  HEAVY TEARDROP-SHANKED RIGHTWARDS ARROW
+  U+00C2  'Â'               16   0.00%  LATIN CAPITAL LETTER A WITH CIRCUMFLEX
+  U+0165  'ť'               17   0.00%  LATIN SMALL LETTER T WITH CARON
+  U+00AB  '«'               17   0.00%  LEFT-POINTING DOUBLE ANGLE QUOTATION MARK
+  U+00E4  'ä'               17   0.00%  LATIN SMALL LETTER A WITH DIAERESIS
+  U+015B  'ś'               18   0.00%  LATIN SMALL LETTER S WITH ACUTE
+  U+25BA  '►'               18   0.00%  BLACK RIGHT-POINTING POINTER
+  U+00A2  '¢'               19   0.00%  CENT SIGN
+  U+0144  'ń'               21   0.00%  LATIN SMALL LETTER N WITH ACUTE
+  U+00F3  'ó'               23   0.00%  LATIN SMALL LETTER O WITH ACUTE
+  U+00E7  'ç'               23   0.00%  LATIN SMALL LETTER C WITH CEDILLA
+  U+0301  '́'               25   0.00%  COMBINING ACUTE ACCENT
+  U+00EB  'ë'               26   0.00%  LATIN SMALL LETTER E WITH DIAERESIS
+  U+012B  'ī'               26   0.00%  LATIN SMALL LETTER I WITH MACRON
+  U+00F6  'ö'               33   0.00%  LATIN SMALL LETTER O WITH DIAERESIS
+  U+00B6  '¶'               34   0.00%  PILCROW SIGN
+  U+00E1  'á'               35   0.00%  LATIN SMALL LETTER A WITH ACUTE
+  U+00E8  'è'               37   0.00%  LATIN SMALL LETTER E WITH GRAVE
+  U+2192  '→'               37   0.00%  RIGHTWARDS ARROW
+  U+2032  '′'               38   0.00%  PRIME
+  U+2044  '⁄'               39   0.00%  FRACTION SLASH
+  U+00FC  'ü'               39   0.00%  LATIN SMALL LETTER U WITH DIAERESIS
+  U+1E5B  'ṛ'               39   0.00%  LATIN SMALL LETTER R WITH DOT BELOW
+  U+1E63  'ṣ'               43   0.00%  LATIN SMALL LETTER S WITH DOT BELOW
+  U+1E47  'ṇ'               43   0.00%  LATIN SMALL LETTER N WITH DOT BELOW
+  U+00E0  'à'               46   0.00%  LATIN SMALL LETTER A WITH GRAVE
+  U+0101  'ā'               48   0.00%  LATIN SMALL LETTER A WITH MACRON
+  U+00A7  '§'               58   0.00%  SECTION SIGN
+  U+00F8  'ø'               69   0.00%  LATIN SMALL LETTER O WITH STROKE
+  U+005E  '^'               77   0.00%  CIRCUMFLEX ACCENT
+  U+00B0  '°'               86   0.00%  DEGREE SIGN
+  U+00ED  'í'               89   0.00%  LATIN SMALL LETTER I WITH ACUTE
+  U+007E  '~'               90   0.00%  TILDE
+  U+00B7  '·'               91   0.00%  MIDDLE DOT
+  U+00E2  'â'               97   0.00%  LATIN SMALL LETTER A WITH CIRCUMFLEX
+  U+007D  '}'               99   0.00%  RIGHT CURLY BRACKET
+  U+005C  '\\'             107   0.00%  REVERSE SOLIDUS
+  U+20AC  '€'              136   0.00%  EURO SIGN
+  U+00AE  '®'              154   0.00%  REGISTERED SIGN
+  U+00BB  '»'              162   0.00%  RIGHT-POINTING DOUBLE ANGLE QUOTATION MARK
+  U+00A3  '£'              172   0.00%  POUND SIGN
+  U+00A9  '©'              188   0.00%  COPYRIGHT SIGN
+  U+0060  '`'              196   0.00%  GRAVE ACCENT
+  U+003C  '<'              210   0.00%  LESS-THAN SIGN
+  U+003D  '='              385   0.00%  EQUALS SIGN
+  U+00E9  'é'              404   0.00%  LATIN SMALL LETTER E WITH ACUTE
+  U+002B  '+'              418   0.00%  PLUS SIGN
+  U+2022  '•'              436   0.00%  BULLET
+  U+0040  '@'              473   0.00%  COMMERCIAL AT
+  U+0023  '#'              505   0.00%  NUMBER SIGN
+  U+2018  '‘'              606   0.01%  LEFT SINGLE QUOTATION MARK
+  U+003E  '>'              670   0.01%  GREATER-THAN SIGN
+  U+005F  '_'              676   0.01%  LOW LINE
+  U+0025  '%'              889   0.01%  PERCENT SIGN
+  U+005A  'Z'              894   0.01%  LATIN CAPITAL LETTER Z
+  U+005B  '['              910   0.01%  LEFT SQUARE BRACKET
+  U+005D  ']'              915   0.01%  RIGHT SQUARE BRACKET
+  U+002A  '*'              962   0.01%  ASTERISK
+  U+0058  'X'            1,147   0.01%  LATIN CAPITAL LETTER X
+  U+0051  'Q'            1,427   0.01%  LATIN CAPITAL LETTER Q
+  U+0026  '&'            1,565   0.01%  AMPERSAND
+  U+2014  '—'            1,638   0.01%  EM DASH
+  U+2013  '–'            1,766   0.01%  EN DASH
+  U+0024  '$'            1,955   0.02%  DOLLAR SIGN
+  U+003B  ';'            3,792   0.03%  SEMICOLON
+  U+0021  '!'            4,735   0.04%  EXCLAMATION MARK
+  U+003F  '?'            5,493   0.05%  QUESTION MARK
+  U+201D  '”'            5,506   0.05%  RIGHT DOUBLE QUOTATION MARK
+  U+002F  '/'            5,548   0.05%  SOLIDUS
+  U+201C  '“'            5,604   0.05%  LEFT DOUBLE QUOTATION MARK
+  U+0056  'V'            5,993   0.05%  LATIN CAPITAL LETTER V
+  U+004B  'K'            6,183   0.05%  LATIN CAPITAL LETTER K
+  U+0059  'Y'            6,282   0.05%  LATIN CAPITAL LETTER Y
+  U+007C  '|'            6,410   0.05%  VERTICAL LINE
+  U+0037  '7'            6,559   0.05%  DIGIT SEVEN
+  U+0036  '6'            7,213   0.06%  DIGIT SIX
+  U+0038  '8'            7,685   0.06%  DIGIT EIGHT
+  U+004A  'J'            8,794   0.07%  LATIN CAPITAL LETTER J
+  U+0055  'U'            8,944   0.07%  LATIN CAPITAL LETTER U
+  U+0034  '4'            8,974   0.07%  DIGIT FOUR
+  U+0071  'q'            9,102   0.08%  LATIN SMALL LETTER Q
+  U+007A  'z'            9,646   0.08%  LATIN SMALL LETTER Z
+  U+0039  '9'            9,778   0.08%  DIGIT NINE
+  U+0035  '5'           10,070   0.08%  DIGIT FIVE
+  U+0033  '3'           11,392   0.10%  DIGIT THREE
+  U+006A  'j'           11,574   0.10%  LATIN SMALL LETTER J
+  U+0028  '('           11,860   0.10%  LEFT PARENTHESIS
+  U+0029  ')'           12,153   0.10%  RIGHT PARENTHESIS
+  U+0047  'G'           12,304   0.10%  LATIN CAPITAL LETTER G
+  U+003A  ':'           12,569   0.11%  COLON
+  U+2019  '’'           12,897   0.11%  RIGHT SINGLE QUOTATION MARK
+  U+0022  '"'           13,000   0.11%  QUOTATION MARK
+  U+004C  'L'           15,179   0.13%  LATIN CAPITAL LETTER L
+  U+004F  'O'           15,751   0.13%  LATIN CAPITAL LETTER O
+  U+0046  'F'           16,180   0.14%  LATIN CAPITAL LETTER F
+  U+004E  'N'           16,565   0.14%  LATIN CAPITAL LETTER N
+  U+0048  'H'           16,682   0.14%  LATIN CAPITAL LETTER H
+  U+0057  'W'           18,174   0.15%  LATIN CAPITAL LETTER W
+  U+0044  'D'           18,445   0.15%  LATIN CAPITAL LETTER D
+  U+0045  'E'           18,887   0.16%  LATIN CAPITAL LETTER E
+  U+0052  'R'           19,027   0.16%  LATIN CAPITAL LETTER R
+  U+0078  'x'           19,382   0.16%  LATIN SMALL LETTER X
+  U+0027  "'"           19,677   0.16%  APOSTROPHE
+  U+0042  'B'           20,276   0.17%  LATIN CAPITAL LETTER B
+  U+0050  'P'           21,225   0.18%  LATIN CAPITAL LETTER P
+  U+0032  '2'           22,746   0.19%  DIGIT TWO
+  U+004D  'M'           24,967   0.21%  LATIN CAPITAL LETTER M
+  U+0031  '1'           28,497   0.24%  DIGIT ONE
+  U+0030  '0'           29,225   0.24%  DIGIT ZERO
+  U+0043  'C'           32,003   0.27%  LATIN CAPITAL LETTER C
+  U+002D  '-'           33,152   0.28%  HYPHEN-MINUS
+  U+0041  'A'           36,789   0.31%  LATIN CAPITAL LETTER A
+  U+0049  'I'           39,961   0.33%  LATIN CAPITAL LETTER I
+  U+0053  'S'           40,128   0.34%  LATIN CAPITAL LETTER S
+  U+0054  'T'           41,707   0.35%  LATIN CAPITAL LETTER T
+  U+006B  'k'           70,446   0.59%  LATIN SMALL LETTER K
+  U+0076  'v'           98,505   0.82%  LATIN SMALL LETTER V
+  U+002C  ','          108,015   0.90%  COMMA
+  U+002E  '.'          123,514   1.03%  FULL STOP
+  U+0062  'b'          128,570   1.07%  LATIN SMALL LETTER B
+  U+0077  'w'          149,228   1.25%  LATIN SMALL LETTER W
+  U+0079  'y'          169,922   1.42%  LATIN SMALL LETTER Y
+  U+0067  'g'          183,199   1.53%  LATIN SMALL LETTER G
+  U+0070  'p'          185,688   1.55%  LATIN SMALL LETTER P
+  U+0066  'f'          188,662   1.58%  LATIN SMALL LETTER F
+  U+006D  'm'          217,568   1.82%  LATIN SMALL LETTER M
+  U+0075  'u'          260,941   2.18%  LATIN SMALL LETTER U
+  U+0063  'c'          277,241   2.32%  LATIN SMALL LETTER C
+  U+0064  'd'          336,150   2.81%  LATIN SMALL LETTER D
+  U+006C  'l'          383,209   3.20%  LATIN SMALL LETTER L
+  U+0068  'h'          412,101   3.44%  LATIN SMALL LETTER H
+  U+0072  'r'          574,263   4.80%  LATIN SMALL LETTER R
+  U+0073  's'          588,423   4.92%  LATIN SMALL LETTER S
+  U+006E  'n'          647,977   5.41%  LATIN SMALL LETTER N
+  U+0069  'i'          656,920   5.49%  LATIN SMALL LETTER I
+  U+006F  'o'          707,331   5.91%  LATIN SMALL LETTER O
+  U+0061  'a'          744,314   6.22%  LATIN SMALL LETTER A
+  U+0074  't'          805,994   6.74%  LATIN SMALL LETTER T
+  U+0065  'e'        1,110,096   9.28%  LATIN SMALL LETTER E
+  U+0020  ' '        2,011,559  16.81%  SPACE
