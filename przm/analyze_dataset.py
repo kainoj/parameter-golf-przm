@@ -2,72 +2,85 @@
 """Analyze fineweb10B_sp1024 dataset statistics."""
 
 import argparse
+import os
+import unicodedata
+from collections import Counter
+from concurrent.futures import ProcessPoolExecutor, as_completed
+from pathlib import Path
+
 import numpy as np
 import sentencepiece as spm
-from collections import Counter
-from pathlib import Path
 
 DATASET_DIR = Path("data/datasets/fineweb10B_sp1024")
 TOKENIZER_PATH = Path("data/tokenizers/fineweb_1024_bpe.model")
 MAGIC = 20240520
+DECODE_CHUNK = 1_000_000  # tokens decoded at once per worker to bound peak memory
+
+# sp loaded once per worker process via initializer
+_worker_sp: spm.SentencePieceProcessor | None = None
+
+
+def _init_worker(tokenizer_path: Path):
+    global _worker_sp
+    _worker_sp = spm.SentencePieceProcessor(model_file=str(tokenizer_path))
 
 
 def read_bin(path: Path) -> np.ndarray:
     with open(path, "rb") as f:
         header = np.frombuffer(f.read(256 * 4), dtype="<i4")
-    assert header[0] == MAGIC
-    n_toks = header[2]
-    with open(path, "rb") as f:
-        f.seek(256 * 4)
-        return np.frombuffer(f.read(n_toks * 2), dtype=np.uint16)
+        assert header[0] == MAGIC
+        n_toks = header[2]
+        return np.frombuffer(f.read(n_toks * 2), dtype=np.uint16).copy()
 
 
-DECODE_SAMPLE = 5_000_000  # tokens to decode for unicode analysis
+def _process_shard(path: Path) -> tuple:
+    """Worker: runs in a subprocess. Returns (n_toks, bincount, char_counter)."""
+    toks = read_bin(path)
+    n = len(toks)
+    bc = np.bincount(toks, minlength=1025).astype(np.int64)
+    cc: Counter = Counter()
+    for start in range(0, n, DECODE_CHUNK):
+        cc.update(_worker_sp.decode(toks[start : start + DECODE_CHUNK].tolist()))
+    return n, bc, cc
 
 
-def analyze_streaming(files: list[Path], sp: spm.SentencePieceProcessor, label: str):
-    import unicodedata
-
+def analyze_streaming(files: list[Path], tokenizer_path: Path, sp: spm.SentencePieceProcessor, label: str, workers: int):
     print(f"\n{'='*60}")
     print(f"  {label}")
     print(f"{'='*60}")
-    print(f"Shards: {len(files)}")
+    print(f"Shards: {len(files)}  Workers: {workers}", flush=True)
 
     total_n = 0
     counts = np.zeros(1025, dtype=np.int64)
     char_counts: Counter = Counter()
-    decoded_so_far = 0
 
-    for i, path in enumerate(files):
-        print(f"  [{i+1}/{len(files)}] {path.name}", flush=True)
-        toks = read_bin(path)
-        total_n += len(toks)
-        counts += np.bincount(toks, minlength=1025)
-
-        # accumulate char stats from a sample spread across shards
-        if decoded_so_far < DECODE_SAMPLE:
-            chunk = toks[:DECODE_SAMPLE - decoded_so_far]
-            text = sp.decode(chunk.tolist())
-            char_counts.update(text)
-            decoded_so_far += len(chunk)
-        # toks goes out of scope here → freed
+    with ProcessPoolExecutor(
+        max_workers=workers,
+        initializer=_init_worker,
+        initargs=(tokenizer_path,),
+    ) as pool:
+        futs = {pool.submit(_process_shard, f): f for f in files}
+        done = 0
+        for fut in as_completed(futs):
+            n, bc, cc = fut.result()
+            total_n += n
+            counts += bc
+            char_counts += cc
+            done += 1
+            print(f"  [{done}/{len(files)}] {futs[fut].name}  total: {total_n:,}", flush=True)
 
     n = total_n
     print(f"\nTotal tokens : {n:>12,}")
 
-    # token id stats
     used_ids = int(np.count_nonzero(counts))
     print(f"Unique token IDs used : {used_ids} / 1024")
 
-    # byte fallback tokens are IDs 5–260
     byte_tok_count = int(counts[5:261].sum())
     print(f"Byte-fallback tokens  : {byte_tok_count:>12,}  ({100*byte_tok_count/n:.2f}% of all tokens)")
 
-    # EOS token usage (id=3)
     eos_count = int(counts[3])
     print(f"EOS tokens (<\\/s>)    : {eos_count:>12,}  (~{n//max(eos_count,1):,} tokens/doc avg doc length)")
 
-    # top 20 tokens
     top20 = np.argsort(counts)[::-1][:20]
     print("\nTop 20 most frequent tokens:")
     print(f"  {'rank':>4}  {'id':>5}  {'count':>10}  {'%':>6}  text")
@@ -75,10 +88,9 @@ def analyze_streaming(files: list[Path], sp: spm.SentencePieceProcessor, label: 
         text = repr(sp.id_to_piece(int(tid)))
         print(f"  {rank:>4}  {tid:>5}  {counts[tid]:>10,}  {100*counts[tid]/n:>5.2f}%  {text}")
 
-    # unicode analysis from accumulated sample
     total_chars = sum(char_counts.values())
     distinct_chars = len(char_counts)
-    print(f"\nDecoded {decoded_so_far:,} tokens → {total_chars:,} chars  (compression: {decoded_so_far/max(total_chars,1):.2f} tok/char)")
+    print(f"\nDecoded {n:,} tokens → {total_chars:,} chars  (compression: {n/max(total_chars,1):.2f} tok/char, all shards)")
     print(f"Distinct unicode characters : {distinct_chars}")
 
     cat_counts: Counter = Counter()
@@ -122,7 +134,6 @@ def analyze_streaming(files: list[Path], sp: spm.SentencePieceProcessor, label: 
             fout.write(f"  U+{ord(ch):04X}  {repr(ch):<8}  {cnt:>10,}  {100*cnt/total_chars:>5.2f}%  {name}\n")
     print(f"Full character list written to {out_path}")
 
-    # token entropy
     nonzero = counts[counts > 0]
     probs = nonzero / n
     entropy = float(-np.sum(probs * np.log2(probs)))
@@ -134,6 +145,8 @@ def analyze_streaming(files: list[Path], sp: spm.SentencePieceProcessor, label: 
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--tokenizer", type=Path, default=TOKENIZER_PATH)
+    parser.add_argument("--workers", type=int, default=32,
+                        help="Number of parallel worker processes (default: 32)")
     args = parser.parse_args()
 
     sp = spm.SentencePieceProcessor(model_file=str(args.tokenizer))
@@ -144,8 +157,9 @@ def main():
     print(f"Val files  : {len(val_files)}")
     print(f"Train files: {len(train_files)}")
 
-    analyze_streaming(val_files, sp, "VALIDATION SET")
-    analyze_streaming(train_files, sp, "TRAIN SET")
+    w = args.workers
+    analyze_streaming(val_files, args.tokenizer, sp, "VALIDATION SET", min(len(val_files), w))
+    analyze_streaming(train_files, args.tokenizer, sp, "TRAIN SET", min(len(train_files), w))
 
 
 if __name__ == "__main__":

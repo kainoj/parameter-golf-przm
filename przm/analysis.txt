@@ -1,11 +1,8 @@
-Val files  : 1
-Train files: 80
-
 ============================================================
   VALIDATION SET
 ============================================================
-Shards: 1
-  [1/1] fineweb_val_000000.bin
+Shards: 1  Workers: 1
+  [1/1] fineweb_val_000000.bin  total: 62,021,846
 
 Total tokens :   62,021,846
 Unique token IDs used : 886 / 1024
@@ -35,50 +32,54 @@ Top 20 most frequent tokens:
     19    268     418,295   0.67%  '▁s'
     20    282     404,682   0.65%  '▁p'
 
-Decoded 5,000,000 tokens → 11,966,819 chars  (compression: 0.42 tok/char)
-Distinct unicode characters : 415
+Decoded 62,021,846 tokens → 150,180,877 chars  (compression: 0.41 tok/char, all shards)
+Distinct unicode characters : 3134
 
 Unicode category breakdown:
-  Ll  Lowercase letter         8,947,992  (74.77%)
-  Zs  Space separator          2,011,559  (16.81%)
-  Lu  Uppercase letter           464,028  (3.88%)
-  Po  Other punct                301,514  (2.52%)
-  Nd  Decimal digit              142,139  (1.19%)
-  Pd  Dash punct                  36,572  (0.31%)
-  Pf  Final quot                  18,569  (0.16%)
-  Pe  Close punct                 13,168  (0.11%)
-  Ps  Open punct                  12,791  (0.11%)
-  Sm  Math symbol                  8,344  (0.07%)
-  Pi  Initial quot                 6,227  (0.05%)
-  Sc  Currency symbol              2,286  (0.02%)
-  Pc  Connector punct                676  (0.01%)
-  So  Other symbol                   517  (0.00%)
-  Sk  Modifier symbol                273  (0.00%)
-  Lo  Other letter                   117  (0.00%)
-  Mn  Mn                              36  (0.00%)
-  Lm  Modifier letter                 11  (0.00%)
+  Ll  Lowercase letter        113,219,963  (75.39%)
+  Zs  Space separator         25,251,826  (16.81%)
+  Lu  Uppercase letter         5,399,306  (3.60%)
+  Po  Other punct              3,511,710  (2.34%)
+  Nd  Decimal digit            1,557,567  (1.04%)
+  Pd  Dash punct                 446,420  (0.30%)
+  Pf  Final quot                 272,127  (0.18%)
+  Pe  Close punct                148,764  (0.10%)
+  Ps  Open punct                 145,385  (0.10%)
+  Sm  Math symbol                 87,981  (0.06%)
+  Pi  Initial quot                79,228  (0.05%)
+  Sc  Currency symbol             26,143  (0.02%)
+  Lo  Other letter                14,103  (0.01%)
+  Pc  Connector punct              9,610  (0.01%)
+  So  Other symbol                 6,892  (0.00%)
+  Mn  Mn                           1,635  (0.00%)
+  Sk  Modifier symbol              1,560  (0.00%)
+  Mc  Mc                             459  (0.00%)
+  Lm  Modifier letter                178  (0.00%)
+  No  Other number                     8  (0.00%)
+  Cf  Format char                      6  (0.00%)
+  Me  Me                               6  (0.00%)
 
 Top 20 rarest characters:
-  U+7530  '田'     count=1       CJK UNIFIED IDEOGRAPH-7530
   U+99A5  '馥'     count=1       CJK UNIFIED IDEOGRAPH-99A5
   U+7504  '甄'     count=1       CJK UNIFIED IDEOGRAPH-7504
-  U+97F3  '音'     count=1       CJK UNIFIED IDEOGRAPH-97F3
-  U+6A02  '樂'     count=1       CJK UNIFIED IDEOGRAPH-6A02
-  U+6F14  '演'     count=1       CJK UNIFIED IDEOGRAPH-6F14
-  U+7A7A  '空'     count=1       CJK UNIFIED IDEOGRAPH-7A7A
-  U+9593  '間'     count=1       CJK UNIFIED IDEOGRAPH-9593
   U+8521  '蔡'     count=1       CJK UNIFIED IDEOGRAPH-8521
-  U+4F9D  '依'     count=1       CJK UNIFIED IDEOGRAPH-4F9D
-  U+6797  '林'     count=1       CJK UNIFIED IDEOGRAPH-6797
-  U+821E  '舞'     count=1       CJK UNIFIED IDEOGRAPH-821E
   U+5B43  '孃'     count=1       CJK UNIFIED IDEOGRAPH-5B43
-  U+4EFB  '任'     count=1       CJK UNIFIED IDEOGRAPH-4EFB
-  U+5BB6  '家'     count=1       CJK UNIFIED IDEOGRAPH-5BB6
   U+8431  '萱'     count=1       CJK UNIFIED IDEOGRAPH-8431
   U+9673  '陳'     count=1       CJK UNIFIED IDEOGRAPH-9673
   U+73CA  '珊'     count=1       CJK UNIFIED IDEOGRAPH-73CA
   U+59AE  '妮'     count=1       CJK UNIFIED IDEOGRAPH-59AE
-  U+738B  '王'     count=1       CJK UNIFIED IDEOGRAPH-738B
+  U+83F2  '菲'     count=1       CJK UNIFIED IDEOGRAPH-83F2
+  U+6B4C  '歌'     count=1       CJK UNIFIED IDEOGRAPH-6B4C
+  U+8CBF  '貿'     count=1       CJK UNIFIED IDEOGRAPH-8CBF
+  U+532F  '匯'     count=1       CJK UNIFIED IDEOGRAPH-532F
+  U+661F  '星'     count=1       CJK UNIFIED IDEOGRAPH-661F
+  U+1E37  'ḷ'     count=1       LATIN SMALL LETTER L WITH DOT BELOW
+  U+6F32  '漲'     count=1       CJK UNIFIED IDEOGRAPH-6F32
+  U+8CFA  '賺'     count=1       CJK UNIFIED IDEOGRAPH-8CFA
+  U+760B  '瘋'     count=1       CJK UNIFIED IDEOGRAPH-760B
+  U+81C9  '臉'     count=1       CJK UNIFIED IDEOGRAPH-81C9
+  U+64EC  '擬'     count=1       CJK UNIFIED IDEOGRAPH-64EC
+  U+64A4  '撤'     count=1       CJK UNIFIED IDEOGRAPH-64A4
 Full character list written to przm/char_freqs_validation.txt
 
 Token entropy : 8.649 bits  (max possible 9.791 bits for 886 tokens)
@@ -87,87 +88,87 @@ Vocab efficiency : 88.3%
 ============================================================
   TRAIN SET
 ============================================================
-Shards: 80
-  [1/80] fineweb_train_000000.bin
-  [2/80] fineweb_train_000001.bin
-  [3/80] fineweb_train_000002.bin
-  [4/80] fineweb_train_000003.bin
-  [5/80] fineweb_train_000004.bin
-  [6/80] fineweb_train_000005.bin
-  [7/80] fineweb_train_000006.bin
-  [8/80] fineweb_train_000007.bin
-  [9/80] fineweb_train_000008.bin
-  [10/80] fineweb_train_000009.bin
-  [11/80] fineweb_train_000010.bin
-  [12/80] fineweb_train_000011.bin
-  [13/80] fineweb_train_000012.bin
-  [14/80] fineweb_train_000013.bin
-  [15/80] fineweb_train_000014.bin
-  [16/80] fineweb_train_000015.bin
-  [17/80] fineweb_train_000016.bin
-  [18/80] fineweb_train_000017.bin
-  [19/80] fineweb_train_000018.bin
-  [20/80] fineweb_train_000019.bin
-  [21/80] fineweb_train_000020.bin
-  [22/80] fineweb_train_000021.bin
-  [23/80] fineweb_train_000022.bin
-  [24/80] fineweb_train_000023.bin
-  [25/80] fineweb_train_000024.bin
-  [26/80] fineweb_train_000025.bin
-  [27/80] fineweb_train_000026.bin
-  [28/80] fineweb_train_000027.bin
-  [29/80] fineweb_train_000028.bin
-  [30/80] fineweb_train_000029.bin
-  [31/80] fineweb_train_000030.bin
-  [32/80] fineweb_train_000031.bin
-  [33/80] fineweb_train_000032.bin
-  [34/80] fineweb_train_000033.bin
-  [35/80] fineweb_train_000034.bin
-  [36/80] fineweb_train_000035.bin
-  [37/80] fineweb_train_000036.bin
-  [38/80] fineweb_train_000037.bin
-  [39/80] fineweb_train_000038.bin
-  [40/80] fineweb_train_000039.bin
-  [41/80] fineweb_train_000040.bin
-  [42/80] fineweb_train_000041.bin
-  [43/80] fineweb_train_000042.bin
-  [44/80] fineweb_train_000043.bin
-  [45/80] fineweb_train_000044.bin
-  [46/80] fineweb_train_000045.bin
-  [47/80] fineweb_train_000046.bin
-  [48/80] fineweb_train_000047.bin
-  [49/80] fineweb_train_000048.bin
-  [50/80] fineweb_train_000049.bin
-  [51/80] fineweb_train_000050.bin
-  [52/80] fineweb_train_000051.bin
-  [53/80] fineweb_train_000052.bin
-  [54/80] fineweb_train_000053.bin
-  [55/80] fineweb_train_000054.bin
-  [56/80] fineweb_train_000055.bin
-  [57/80] fineweb_train_000056.bin
-  [58/80] fineweb_train_000057.bin
-  [59/80] fineweb_train_000058.bin
-  [60/80] fineweb_train_000059.bin
-  [61/80] fineweb_train_000060.bin
-  [62/80] fineweb_train_000061.bin
-  [63/80] fineweb_train_000062.bin
-  [64/80] fineweb_train_000063.bin
-  [65/80] fineweb_train_000064.bin
-  [66/80] fineweb_train_000065.bin
-  [67/80] fineweb_train_000066.bin
-  [68/80] fineweb_train_000067.bin
-  [69/80] fineweb_train_000068.bin
-  [70/80] fineweb_train_000069.bin
-  [71/80] fineweb_train_000070.bin
-  [72/80] fineweb_train_000071.bin
-  [73/80] fineweb_train_000072.bin
-  [74/80] fineweb_train_000073.bin
-  [75/80] fineweb_train_000074.bin
-  [76/80] fineweb_train_000075.bin
-  [77/80] fineweb_train_000076.bin
-  [78/80] fineweb_train_000077.bin
-  [79/80] fineweb_train_000078.bin
-  [80/80] fineweb_train_000079.bin
+Shards: 80  Workers: 32
+  [1/80] fineweb_train_000018.bin  total: 100,000,000
+  [2/80] fineweb_train_000005.bin  total: 200,000,000
+  [3/80] fineweb_train_000000.bin  total: 300,000,000
+  [4/80] fineweb_train_000008.bin  total: 400,000,000
+  [5/80] fineweb_train_000003.bin  total: 500,000,000
+  [6/80] fineweb_train_000013.bin  total: 600,000,000
+  [7/80] fineweb_train_000017.bin  total: 700,000,000
+  [8/80] fineweb_train_000006.bin  total: 800,000,000
+  [9/80] fineweb_train_000009.bin  total: 900,000,000
+  [10/80] fineweb_train_000023.bin  total: 1,000,000,000
+  [11/80] fineweb_train_000010.bin  total: 1,100,000,000
+  [12/80] fineweb_train_000020.bin  total: 1,200,000,000
+  [13/80] fineweb_train_000022.bin  total: 1,300,000,000
+  [14/80] fineweb_train_000024.bin  total: 1,400,000,000
+  [15/80] fineweb_train_000002.bin  total: 1,500,000,000
+  [16/80] fineweb_train_000028.bin  total: 1,600,000,000
+  [17/80] fineweb_train_000011.bin  total: 1,700,000,000
+  [18/80] fineweb_train_000016.bin  total: 1,800,000,000
+  [19/80] fineweb_train_000031.bin  total: 1,900,000,000
+  [20/80] fineweb_train_000027.bin  total: 2,000,000,000
+  [21/80] fineweb_train_000019.bin  total: 2,100,000,000
+  [22/80] fineweb_train_000030.bin  total: 2,200,000,000
+  [23/80] fineweb_train_000007.bin  total: 2,300,000,000
+  [24/80] fineweb_train_000001.bin  total: 2,400,000,000
+  [25/80] fineweb_train_000026.bin  total: 2,500,000,000
+  [26/80] fineweb_train_000012.bin  total: 2,600,000,000
+  [27/80] fineweb_train_000015.bin  total: 2,700,000,000
+  [28/80] fineweb_train_000021.bin  total: 2,800,000,000
+  [29/80] fineweb_train_000025.bin  total: 2,900,000,000
+  [30/80] fineweb_train_000004.bin  total: 3,000,000,000
+  [31/80] fineweb_train_000014.bin  total: 3,100,000,000
+  [32/80] fineweb_train_000029.bin  total: 3,200,000,000
+  [33/80] fineweb_train_000036.bin  total: 3,300,000,000
+  [34/80] fineweb_train_000038.bin  total: 3,400,000,000
+  [35/80] fineweb_train_000037.bin  total: 3,500,000,000
+  [36/80] fineweb_train_000035.bin  total: 3,600,000,000
+  [37/80] fineweb_train_000033.bin  total: 3,700,000,000
+  [38/80] fineweb_train_000039.bin  total: 3,800,000,000
+  [39/80] fineweb_train_000051.bin  total: 3,900,000,000
+  [40/80] fineweb_train_000032.bin  total: 4,000,000,000
+  [41/80] fineweb_train_000049.bin  total: 4,100,000,000
+  [42/80] fineweb_train_000048.bin  total: 4,200,000,000
+  [43/80] fineweb_train_000044.bin  total: 4,300,000,000
+  [44/80] fineweb_train_000046.bin  total: 4,400,000,000
+  [45/80] fineweb_train_000043.bin  total: 4,500,000,000
+  [46/80] fineweb_train_000047.bin  total: 4,600,000,000
+  [47/80] fineweb_train_000040.bin  total: 4,700,000,000
+  [48/80] fineweb_train_000057.bin  total: 4,800,000,000
+  [49/80] fineweb_train_000052.bin  total: 4,900,000,000
+  [50/80] fineweb_train_000042.bin  total: 5,000,000,000
+  [51/80] fineweb_train_000034.bin  total: 5,100,000,000
+  [52/80] fineweb_train_000056.bin  total: 5,200,000,000
+  [53/80] fineweb_train_000054.bin  total: 5,300,000,000
+  [54/80] fineweb_train_000055.bin  total: 5,400,000,000
+  [55/80] fineweb_train_000053.bin  total: 5,500,000,000
+  [56/80] fineweb_train_000050.bin  total: 5,600,000,000
+  [57/80] fineweb_train_000045.bin  total: 5,700,000,000
+  [58/80] fineweb_train_000061.bin  total: 5,800,000,000
+  [59/80] fineweb_train_000058.bin  total: 5,900,000,000
+  [60/80] fineweb_train_000060.bin  total: 6,000,000,000
+  [61/80] fineweb_train_000041.bin  total: 6,100,000,000
+  [62/80] fineweb_train_000059.bin  total: 6,200,000,000
+  [63/80] fineweb_train_000062.bin  total: 6,300,000,000
+  [64/80] fineweb_train_000063.bin  total: 6,400,000,000
+  [65/80] fineweb_train_000064.bin  total: 6,500,000,000
+  [66/80] fineweb_train_000068.bin  total: 6,600,000,000
+  [67/80] fineweb_train_000066.bin  total: 6,700,000,000
+  [68/80] fineweb_train_000069.bin  total: 6,800,000,000
+  [69/80] fineweb_train_000078.bin  total: 6,900,000,000
+  [70/80] fineweb_train_000071.bin  total: 7,000,000,000
+  [71/80] fineweb_train_000067.bin  total: 7,100,000,000
+  [72/80] fineweb_train_000070.bin  total: 7,200,000,000
+  [73/80] fineweb_train_000076.bin  total: 7,300,000,000
+  [74/80] fineweb_train_000072.bin  total: 7,400,000,000
+  [75/80] fineweb_train_000075.bin  total: 7,500,000,000
+  [76/80] fineweb_train_000077.bin  total: 7,600,000,000
+  [77/80] fineweb_train_000065.bin  total: 7,700,000,000
+  [78/80] fineweb_train_000073.bin  total: 7,800,000,000
+  [79/80] fineweb_train_000079.bin  total: 7,900,000,000
+  [80/80] fineweb_train_000074.bin  total: 8,000,000,000
 
 Total tokens : 8,000,000,000
 Unique token IDs used : 892 / 1024
@@ -197,52 +198,59 @@ Top 20 most frequent tokens:
     19    268  54,258,756   0.68%  '▁s'
     20    282  52,300,256   0.65%  '▁p'
 
-Decoded 5,000,000 tokens → 12,181,061 chars  (compression: 0.41 tok/char)
-Distinct unicode characters : 660
+Decoded 8,000,000,000 tokens → 19,417,321,419 chars  (compression: 0.41 tok/char, all shards)
+Distinct unicode characters : 14820
 
 Unicode category breakdown:
-  Ll  Lowercase letter         9,216,205  (75.66%)
-  Zs  Space separator          2,054,190  (16.86%)
-  Lu  Uppercase letter           418,841  (3.44%)
-  Po  Other punct                276,454  (2.27%)
-  Nd  Decimal digit              118,518  (0.97%)
-  Pd  Dash punct                  32,661  (0.27%)
-  Pf  Final quot                  24,937  (0.20%)
-  Pe  Close punct                 10,407  (0.09%)
-  Ps  Open punct                  10,193  (0.08%)
-  Sm  Math symbol                  7,851  (0.06%)
-  Pi  Initial quot                 7,154  (0.06%)
-  Sc  Currency symbol              2,004  (0.02%)
-  So  Other symbol                   622  (0.01%)
-  Lo  Other letter                   526  (0.00%)
-  Pc  Connector punct                330  (0.00%)
-  Mn  Mn                              78  (0.00%)
-  Sk  Modifier symbol                 74  (0.00%)
-  Mc  Mc                              11  (0.00%)
-  Lm  Modifier letter                  4  (0.00%)
-  Cf  Format char                      1  (0.00%)
+  Ll  Lowercase letter        14,670,456,950  (75.55%)
+  Zs  Space separator         3,258,416,904  (16.78%)
+  Lu  Uppercase letter        687,964,087  (3.54%)
+  Po  Other punct             444,425,485  (2.29%)
+  Nd  Decimal digit           195,237,071  (1.01%)
+  Pd  Dash punct              56,891,437  (0.29%)
+  Pf  Final quot              36,670,257  (0.19%)
+  Pe  Close punct             18,497,933  (0.10%)
+  Ps  Open punct              18,099,843  (0.09%)
+  Sm  Math symbol             12,310,422  (0.06%)
+  Pi  Initial quot            10,611,582  (0.05%)
+  Sc  Currency symbol          3,397,156  (0.02%)
+  Lo  Other letter             1,630,007  (0.01%)
+  Pc  Connector punct          1,177,061  (0.01%)
+  So  Other symbol               955,447  (0.00%)
+  Mn  Mn                         262,647  (0.00%)
+  Sk  Modifier symbol            223,786  (0.00%)
+  Mc  Mc                          61,894  (0.00%)
+  Lm  Modifier letter             28,636  (0.00%)
+  No  Other number                 1,624  (0.00%)
+  Me  Me                             682  (0.00%)
+  Cf  Format char                    407  (0.00%)
+  Co  Co                              47  (0.00%)
+  Nl  Letter number                   43  (0.00%)
+  Lt  Titlecase letter                 7  (0.00%)
+  Cc  Control char                     2  (0.00%)
+  Cn  Cn                               2  (0.00%)
 
 Top 20 rarest characters:
-  U+1F6A2  '🚢'     count=1       SHIP
-  U+011B  'ě'     count=1       LATIN SMALL LETTER E WITH CARON
-  U+0158  'Ř'     count=1       LATIN CAPITAL LETTER R WITH CARON
-  U+010D  'č'     count=1       LATIN SMALL LETTER C WITH CARON
-  U+016F  'ů'     count=1       LATIN SMALL LETTER U WITH RING ABOVE
-  U+5143  '元'     count=1       CJK UNIFIED IDEOGRAPH-5143
-  U+05D7  'ח'     count=1       HEBREW LETTER HET
-  U+05E7  'ק'     count=1       HEBREW LETTER QOF
-  U+05D1  'ב'     count=1       HEBREW LETTER BET
-  U+05EA  'ת'     count=1       HEBREW LETTER TAV
-  U+25C6  '◆'     count=1       BLACK DIAMOND
-  U+06D2  'ے'     count=1       ARABIC LETTER YEH BARREE
-  U+00AC  '¬'     count=1       NOT SIGN
-  U+1F451  '👑'     count=1       CROWN
-  U+1F4B0  '💰'     count=1       MONEY BAG
-  U+1F48D  '💍'     count=1       RING
-  U+1F601  '😁'     count=1       GRINNING FACE WITH SMILING EYES
-  U+0416  'Ж'     count=1       CYRILLIC CAPITAL LETTER ZHE
-  U+0394  'Δ'     count=1       GREEK CAPITAL LETTER DELTA
-  U+0920  'ठ'     count=1       DEVANAGARI LETTER TTHA
+  U+7FA5  '羥'     count=1       CJK UNIFIED IDEOGRAPH-7FA5
+  U+6EBC  '溼'     count=1       CJK UNIFIED IDEOGRAPH-6EBC
+  U+75B4  '疴'     count=1       CJK UNIFIED IDEOGRAPH-75B4
+  U+8F8D  '辍'     count=1       CJK UNIFIED IDEOGRAPH-8F8D
+  U+65F7  '旷'     count=1       CJK UNIFIED IDEOGRAPH-65F7
+  U+AC2C  '갬'     count=1       HANGUL SYLLABLE GAEM
+  U+95AD  '閭'     count=1       CJK UNIFIED IDEOGRAPH-95AD
+  U+1369  '፩'     count=1       ETHIOPIC DIGIT ONE
+  U+920D  '鈍'     count=1       CJK UNIFIED IDEOGRAPH-920D
+  U+7ACA  '竊'     count=1       CJK UNIFIED IDEOGRAPH-7ACA
+  U+8AD7  '諗'     count=1       CJK UNIFIED IDEOGRAPH-8AD7
+  U+551E  '唞'     count=1       CJK UNIFIED IDEOGRAPH-551E
+  U+6160  '慠'     count=1       CJK UNIFIED IDEOGRAPH-6160
+  U+1F301  '🌁'     count=1       FOGGY
+  U+990C  '餌'     count=1       CJK UNIFIED IDEOGRAPH-990C
+  U+0A72  'ੲ'     count=1       GURMUKHI IRI
+  U+20A5  '₥'     count=1       MILL SIGN
+  U+7202  '爂'     count=1       CJK UNIFIED IDEOGRAPH-7202
+  U+B9EC  '맬'     count=1       HANGUL SYLLABLE MAEL
+  U+9E75  '鹵'     count=1       CJK UNIFIED IDEOGRAPH-9E75
 Full character list written to przm/char_freqs_train.txt
 
 Token entropy : 8.652 bits  (max possible 9.801 bits for 892 tokens)
