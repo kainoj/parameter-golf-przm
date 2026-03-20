@@ -22,23 +22,45 @@ def read_bin(path: Path) -> np.ndarray:
         return np.frombuffer(f.read(n_toks * 2), dtype=np.uint16)
 
 
-def analyze(toks: np.ndarray, sp: spm.SentencePieceProcessor, label: str):
+DECODE_SAMPLE = 5_000_000  # tokens to decode for unicode analysis
+
+
+def analyze_streaming(files: list[Path], sp: spm.SentencePieceProcessor, label: str):
+    import unicodedata
+
     print(f"\n{'='*60}")
     print(f"  {label}")
     print(f"{'='*60}")
+    print(f"Shards: {len(files)}")
 
-    n = len(toks)
+    total_n = 0
+    counts = np.zeros(1025, dtype=np.int64)
+    char_counts: Counter = Counter()
+    decoded_so_far = 0
+
+    for i, path in enumerate(files):
+        print(f"  [{i+1}/{len(files)}] {path.name}", flush=True)
+        toks = read_bin(path)
+        total_n += len(toks)
+        counts += np.bincount(toks, minlength=1025)
+
+        # accumulate char stats from a sample spread across shards
+        if decoded_so_far < DECODE_SAMPLE:
+            chunk = toks[:DECODE_SAMPLE - decoded_so_far]
+            text = sp.decode(chunk.tolist())
+            char_counts.update(text)
+            decoded_so_far += len(chunk)
+        # toks goes out of scope here → freed
+
+    n = total_n
     print(f"\nTotal tokens : {n:>12,}")
 
     # token id stats
-    counts = np.bincount(toks, minlength=1025)
-    used_ids = np.count_nonzero(counts)
+    used_ids = int(np.count_nonzero(counts))
     print(f"Unique token IDs used : {used_ids} / 1024")
 
     # byte fallback tokens are IDs 5–260
-    byte_tok_mask = np.zeros(1025, dtype=bool)
-    byte_tok_mask[5:261] = True
-    byte_tok_count = counts[5:261].sum()
+    byte_tok_count = int(counts[5:261].sum())
     print(f"Byte-fallback tokens  : {byte_tok_count:>12,}  ({100*byte_tok_count/n:.2f}% of all tokens)")
 
     # EOS token usage (id=3)
@@ -53,23 +75,15 @@ def analyze(toks: np.ndarray, sp: spm.SentencePieceProcessor, label: str):
         text = repr(sp.id_to_piece(int(tid)))
         print(f"  {rank:>4}  {tid:>5}  {counts[tid]:>10,}  {100*counts[tid]/n:>5.2f}%  {text}")
 
-    # decode a chunk and analyze unicode
-    print("\nDecoding full token sequence for unicode analysis...")
-    CHUNK = min(n, 5_000_000)
-    text = sp.decode(toks[:CHUNK].tolist())
-    total_chars = len(text)
-    print(f"Decoded {CHUNK:,} tokens → {total_chars:,} chars  (compression: {CHUNK/total_chars:.2f} tok/char)")
-
-    char_counts = Counter(text)
+    # unicode analysis from accumulated sample
+    total_chars = sum(char_counts.values())
     distinct_chars = len(char_counts)
+    print(f"\nDecoded {decoded_so_far:,} tokens → {total_chars:,} chars  (compression: {decoded_so_far/max(total_chars,1):.2f} tok/char)")
     print(f"Distinct unicode characters : {distinct_chars}")
 
-    # unicode category breakdown
-    import unicodedata
     cat_counts: Counter = Counter()
     for ch, cnt in char_counts.items():
-        cat = unicodedata.category(ch)
-        cat_counts[cat] += cnt
+        cat_counts[unicodedata.category(ch)] += cnt
     total_ch = sum(cat_counts.values())
     cat_names = {
         "Lu": "Uppercase letter", "Ll": "Lowercase letter", "Lt": "Titlecase letter",
@@ -87,9 +101,8 @@ def analyze(toks: np.ndarray, sp: spm.SentencePieceProcessor, label: str):
         name = cat_names.get(cat, cat)
         print(f"  {cat}  {name:<22}  {cnt:>10,}  ({100*cnt/total_ch:.2f}%)")
 
-    # top 20 rarest chars → terminal
-    print("\nTop 20 rarest characters:")
     all_sorted = sorted(char_counts.items(), key=lambda x: x[1])
+    print("\nTop 20 rarest characters:")
     for ch, cnt in all_sorted[:20]:
         try:
             name = unicodedata.name(ch)
@@ -97,8 +110,7 @@ def analyze(toks: np.ndarray, sp: spm.SentencePieceProcessor, label: str):
             name = "?"
         print(f"  U+{ord(ch):04X}  {repr(ch):<6}  count={cnt:<6}  {name}")
 
-    # all chars sorted least → most frequent → file
-    out_path = Path(f"char_freqs_{label.split()[0].lower()}.txt")
+    out_path = Path("przm") / f"char_freqs_{label.split()[0].lower()}.txt"
     with open(out_path, "w", encoding="utf-8") as fout:
         fout.write(f"All {distinct_chars} characters (least → most frequent) — {label}\n")
         fout.write(f"  {'U+':>6}  {'repr':<8}  {'count':>10}  {'%':>6}  name\n")
@@ -111,15 +123,12 @@ def analyze(toks: np.ndarray, sp: spm.SentencePieceProcessor, label: str):
     print(f"Full character list written to {out_path}")
 
     # token entropy
-    probs = counts[counts > 0] / n
-    entropy = -np.sum(probs * np.log2(probs))
-    max_entropy = np.log2(used_ids)
+    nonzero = counts[counts > 0]
+    probs = nonzero / n
+    entropy = float(-np.sum(probs * np.log2(probs)))
+    max_entropy = float(np.log2(used_ids))
     print(f"\nToken entropy : {entropy:.3f} bits  (max possible {max_entropy:.3f} bits for {used_ids} tokens)")
     print(f"Vocab efficiency : {100*entropy/max_entropy:.1f}%")
-
-
-def load_concat(files: list[Path]) -> np.ndarray:
-    return np.concatenate([read_bin(f) for f in files])
 
 
 def main():
@@ -135,12 +144,8 @@ def main():
     print(f"Val files  : {len(val_files)}")
     print(f"Train files: {len(train_files)}")
 
-    val_toks = load_concat(val_files)
-    analyze(val_toks, sp, "VALIDATION SET")
-
-    print("\nLoading train shards...")
-    train_toks = load_concat(train_files)
-    analyze(train_toks, sp, "TRAIN SET")
+    analyze_streaming(val_files, sp, "VALIDATION SET")
+    analyze_streaming(train_files, sp, "TRAIN SET")
 
 
 if __name__ == "__main__":
