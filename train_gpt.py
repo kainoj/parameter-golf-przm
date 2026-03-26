@@ -204,6 +204,33 @@ def build_sentencepiece_luts(
     )
 
 
+def build_vocab_remap(
+    sp: spm.SentencePieceProcessor,
+    orig_vocab_size: int,
+    val_tokens: torch.Tensor,
+) -> tuple[torch.Tensor, int]:
+    """
+    Build a compressed vocab remap that eliminates dead tokens and collapses all
+    byte-fallback IDs (5–260) to a single shared OOV slot.
+
+    Live BPE IDs (seen in val, not byte/control/unknown) → contiguous new IDs 0..N-1
+    Everything else (byte-fallbacks, dead tokens) → OOV_ID = N
+
+    Returns (remap int64[orig_vocab_size], new_vocab_size = N+1)
+    """
+    seen = set(int(i) for i in val_tokens.view(-1).to(torch.int64).unique().tolist())
+    live_bpe_ids = sorted(
+        tid for tid in seen
+        if not sp.is_byte(tid) and not sp.is_control(tid) and not sp.is_unknown(tid)
+    )
+    OOV_ID = len(live_bpe_ids)
+    new_vocab_size = OOV_ID + 1
+    remap = torch.full((orig_vocab_size,), OOV_ID, dtype=torch.int64)
+    for new_id, old_id in enumerate(live_bpe_ids):
+        remap[old_id] = new_id
+    return remap, new_vocab_size
+
+
 def load_validation_tokens(pattern: str, seq_len: int) -> Tensor:
     files = [Path(p) for p in sorted(glob.glob(pattern))]
     if not files:
@@ -649,6 +676,7 @@ class GPT(nn.Module):
     def __init__(
         self,
         vocab_size: int,
+        vocab_remap: torch.Tensor,
         num_layers: int,
         model_dim: int,
         num_heads: int,
@@ -666,7 +694,8 @@ class GPT(nn.Module):
         self.tie_embeddings = tie_embeddings
         self.tied_embed_init_std = tied_embed_init_std
         self.logit_softcap = logit_softcap
-        self.tok_emb = nn.Embedding(vocab_size, model_dim)
+        self.register_buffer("vocab_remap", vocab_remap)  # int64[orig_vocab_size]
+        self.tok_emb = nn.Embedding(vocab_size, model_dim)  # vocab_size = new (compressed) size
         self.num_encoder_layers = num_layers // 2
         self.num_decoder_layers = num_layers - self.num_encoder_layers
         self.num_skip_weights = min(self.num_encoder_layers, self.num_decoder_layers)
@@ -698,6 +727,8 @@ class GPT(nn.Module):
                 nn.init.zeros_(module.weight)
 
     def forward(self, input_ids: Tensor, target_ids: Tensor) -> Tensor:
+        input_ids = self.vocab_remap[input_ids]    # original IDs → compressed vocab space
+        target_ids = self.vocab_remap[target_ids]  # same for CE targets
         x = self.tok_emb(input_ids)
         x = F.rms_norm(x, (x.size(-1),))
         x0 = x
@@ -812,8 +843,13 @@ def main() -> None:
     dataset_dir = Path(args.data_path).resolve()
     actual_train_files = len(list(dataset_dir.glob("fineweb_train_*.bin")))
     val_tokens = load_validation_tokens(args.val_files, args.train_seq_len)
+    vocab_remap, new_vocab_size = build_vocab_remap(sp, args.vocab_size, val_tokens)
+    log0(
+        f"vocab_remap: {args.vocab_size} → {new_vocab_size} "
+        f"(byte-fallbacks+dead collapsed to OOV; live_bpe={new_vocab_size - 1})"
+    )
     base_bytes_lut, has_leading_space_lut, is_boundary_token_lut = build_sentencepiece_luts(
-        sp, args.vocab_size, device
+        sp, args.vocab_size, device  # BPB eval still uses original IDs — no change needed
     )
     log0(f"val_bpb:enabled tokenizer_kind=sentencepiece tokenizer_path={args.tokenizer_path}")
     log0(f"train_loader:dataset:{dataset_dir.name} train_shards:{actual_train_files}")
@@ -824,7 +860,8 @@ def main() -> None:
     # -----------------------------
 
     base_model = GPT(
-        vocab_size=args.vocab_size,
+        vocab_size=new_vocab_size,
+        vocab_remap=vocab_remap,
         num_layers=args.num_layers,
         model_dim=args.model_dim,
         num_heads=args.num_heads,

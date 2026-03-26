@@ -120,7 +120,9 @@ This defaults to the full validation split plus 80 training shards (8B tokens). 
 Launch your first training run. Note that we're passing `nproc_per_node=1` because we're running on a single H100 GPU in this case.
 
 ```bash
-RUN_ID=baseline_sp1024 \
+RUN_ID=reduced_vocab_size \
+MAX_WALLCLOCK_SECONDS=180 \
+VAL_LOSS_EVERY=0 \
 DATA_PATH=./data/datasets/fineweb10B_sp1024/ \
 TOKENIZER_PATH=./data/tokenizers/fineweb_1024_bpe.model \
 VOCAB_SIZE=1024 \
